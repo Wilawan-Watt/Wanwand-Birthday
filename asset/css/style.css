@@ -42,6 +42,40 @@ a {
     padding: 0 2rem;
 }
 
+/* Media query สำหรับหน้าจอที่มีความกว้างไม่เกิน 375px */
+@media (max-width: 375px) {
+    header {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav_link {
+        min-width: 70%;
+
+        a {
+            font-size: 16px;
+            padding: 0 1rem;
+        }
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 375-550px */
+@media (min-width: 375px) and (max-width: 550px) {
+    header {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav_link {
+        min-width: 70%;
+
+        a {
+            font-size: 18px;
+            padding: 0 1rem;
+        }
+    }
+}
+
 
 /* --------------- Gift Box --------------- */
 .giftbox {
@@ -57,7 +91,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;  
+    flex-direction: column;
 }
 
 .giftbox_wrapper {
@@ -129,6 +163,84 @@ a {
     font-size: 25px;
 }
 
+/* Media query สำหรับหน้าจอที่มีความกว้างไม่เกิน 375px */
+@media (max-width: 375px) {
+    .giftbox {
+        width: 100%;
+        height: 350px;
+        padding: 50px 0;
+    }
+
+    .giftbox_wrapper {
+        scale: 60%;
+        position: absolute;
+        top: -20px;
+        z-index: 5;
+    }
+
+    .giftbox_top:hover~.wishes {
+        transform: translateY(-230px);
+        z-index: 1;
+        transition: .5s;
+    }
+
+    .wishes {
+        position: relative;
+        top: 290px;
+        scale: 80%;
+
+        p {
+            font-size: 30px;
+        }
+    }
+
+    .textunderbox {
+        position: absolute;
+        top: 360px;
+        font-family: "Sriracha", cursive;
+        font-size: 20px;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 375-550px */
+@media (min-width: 375px) and (max-width: 550px) {
+    .giftbox {
+        width: 100%;
+        height: 380px;
+        padding: 50px 0;
+    }
+
+    .giftbox_wrapper {
+        scale: 70%;
+        position: absolute;
+        top: -30px;
+        z-index: 5;
+    }
+
+    .giftbox_top:hover~.wishes {
+        transform: translateY(-220px);
+        z-index: 1;
+        transition: .5s;
+    }
+
+    .wishes {
+        position: relative;
+        top: 280px;
+        scale: 80%;
+
+        p {
+            font-size: 33px;
+        }
+    }
+
+    .textunderbox {
+        position: absolute;
+        top: 380px;
+        font-family: "Sriracha", cursive;
+        font-size: 25px;
+    }
+}
+
 
 /* --------------- Sunshine Song --------------- */
 .sunshine_song {
@@ -184,6 +296,62 @@ a {
     filter: drop-shadow(3px 10px 6px #41414185);
 }
 
+/* Media query สำหรับหน้าจอที่มีความกว้างไม่เกิน 375px */
+@media (max-width: 375px) {
+    .sunshine_song {
+        height: fit-content;
+        width: 100%;
+        height: 400px;
+    }
+
+    .sunshine_text {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+
+    .retro_player {
+        width: 150px;
+    }
+
+    .retro_cd {
+        width: 100px;
+        right: -20px;
+    }
+
+    .retro_pin {
+        width: 40px;
+        right: 55px;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 375-550px */
+@media (min-width: 375px) and (max-width: 550px) {
+    .sunshine_song {
+        height: fit-content;
+        width: 100%;
+        height: 500px;
+    }
+
+    .sunshine_text {
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+
+    .retro_player {
+        width: 180px;
+    }
+
+    .retro_cd {
+        width: 120px;
+        right: -20px;
+    }
+
+    .retro_pin {
+        width: 45px;
+        right: 60px;
+    }
+}
+
 
 /* --------------- Birthday Wishes --------------- */
 .birthday_card {
@@ -224,6 +392,36 @@ a {
         display: flex;
         justify-self: center;
         width: 100px;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้างไม่เกิน 375px */
+@media (max-width: 375px) {
+    .birthday_card {
+        width: 100%;
+        height: fit-content;
+        padding: 80px 0;
+    }
+
+    .card_container {
+        max-width: 75%;
+    }
+
+    .card_text h2 {
+        font-size: 20px;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 375-550px */
+@media (min-width: 375px) and (max-width: 550px) {
+    .birthday_card {
+        width: 100%;
+        height: fit-content;
+        padding: 100px 0;
+    }
+
+    .card_container {
+        max-width: 70%;
     }
 }
 
@@ -294,5 +492,49 @@ a {
 
     100% {
         bottom: 100%;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้างไม่เกิน 375px */
+@media (max-width: 375px) {
+    .end_credit {
+        width: 100%;
+        height: 180px;
+    }
+
+    .credit_container {
+        max-width: 80%;
+    }
+
+    .credit_wrapper {
+        img {
+            scale: 80%;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 375-550px */
+@media (min-width: 375px) and (max-width: 550px) {
+    .end_credit {
+        width: 100%;
+        height: 250px;
+    }
+
+    .credit_container {
+        max-width: 80%;
+    }
+
+    @keyframes scroll-up {
+        0% {
+            bottom: -250%;
+        }
+    
+        100% {
+            bottom: 100%;
+        }
     }
 }

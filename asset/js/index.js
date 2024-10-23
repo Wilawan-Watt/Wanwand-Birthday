@@ -30,13 +30,26 @@ retroCd.addEventListener('click', () => {
         let angle = 0; // Initial angle
         rotationInterval = setInterval(() => {
             angle += 1; // Increase angle
-            retroCd.style.transform = `translateX(210px) rotate(${angle}deg)`; // Rotate while maintaining the translation
+
+            if (window.innerWidth <= 375) {
+                retroCd.style.transform = `translateX(105px) rotate(${angle}deg)`;
+            } if (window.innerWidth <= 550) {
+                retroCd.style.transform = `translateX(130px) rotate(${angle}deg)`;
+            } else {
+                retroCd.style.transform = `translateX(210px) rotate(${angle}deg)`; // Rotate while maintaining the translation
+            }
         }, 16); // Approximately 60 frames per second
 
         // Tilt retro_pin after 1 second
         setTimeout(() => {
             if (isPlaying) {
-                retroPin.style.transform = 'translateX(-20px)rotate(12deg)'; // Tilt retro_pin by 10 degrees
+                if (window.innerWidth <= 375) {
+                    retroPin.style.transform = 'translateX(-10px) rotate(12deg)'; // สำหรับหน้าจอที่กว้างไม่เกิน 375px
+                } if (window.innerWidth <= 550) {
+                    retroPin.style.transform = 'translateX(-10px) rotate(12deg)'; // สำหรับหน้าจอที่กว้างไม่เกิน 550px
+                } else {
+                    retroPin.style.transform = 'translateX(-20px)rotate(12deg)'; // Tilt retro_pin by 10 degrees
+                }
             }
         }, 350); // Delay for 1 second before tilting retro_pin
     } else {
