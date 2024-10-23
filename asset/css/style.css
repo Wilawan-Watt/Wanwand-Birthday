@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+/* --------------- Typography --------------- */
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Sriracha&display=swap');
+
+body {
+    font-family: "Mali", cursive;
+}
+
+/* --------------- Navigation Bar --------------- */
+header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav_link {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+    padding: 0 2rem;
+}
+
+
+/* --------------- Gift Box --------------- */
+.giftbox {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(203, 242, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.giftbox_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.giftbox_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.giftbox_top {
+    position: absolute;
+    top: 250px;
+    width: 250px;
+    cursor: pointer;
+    z-index: 5;
+    transform-origin: bottom left;
+    transition: transform 0.4s;
+}
+
+.giftbox_bottom {
+    position: absolute;
+    top: 350px;
+    width: 300px;
+    z-index: 3;
+}
+
+.shadow {
+    width: 280px;
+    height: 20px;
+    background-color: rgba(32, 32, 32, 0.2);
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    top: 480px;
+}
+
+.giftbox_top:hover {
+    transform: rotate(-110deg) scale(0.85);
+    transition: .3s;
+}
+
+.giftbox_top:hover~.wishes {
+    transform: translateY(-150px);
+    z-index: 1;
+    transition: .5s;
+}
+
+.wishes {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 700;
+    transition: .4s;
+    z-index: -2;
+
+    div {
+        font-size: 50px;
+    }
+
+    .cake {
+        width: 80px;
+    }
+}
+
+.textunderbox {
+    position: absolute;
+    top: 530px;
+    font-family: "Sriracha", cursive;
+    font-size: 25px;
+}
+
+
+/* --------------- Sunshine Song --------------- */
+.sunshine_song {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.song_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sunshine_text {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Sriracha", cursive;
+    padding-bottom: 50px;
+}
+
+.retro_player {
+    width: 300px;
+    filter: drop-shadow(3px 10px 6px #41414185);
+}
+
+.retro_cd {
+    width: 200px;
+    z-index: 2;
+    cursor: pointer;
+    position: relative;
+    right: -40px;
+    transition: transform 0.2s ease;
+}
+
+.retro_pin {
+    width: 80px;
+    z-index: 3;
+    position: relative;
+    right: 105px;
+    /* position: relative;
+    left: -100px; */
+    transition: transform 0.1s ease;
+    filter: drop-shadow(3px 10px 6px #41414185);
+}
+
+
+/* --------------- Birthday Wishes --------------- */
+.birthday_card {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imag&sound/Wanwand\ Birthday_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 180vh;
+    /* padding: 50px 0; */
+}
+
+.card_container {
+    max-width: 700px;
+}
+
+.card_text {
+    font-size: 18px;
+
+    h2 {
+        text-align: center;
+        padding-bottom: .8rem;
+    }
+
+    div {
+        text-align: center;
+        padding: .8rem 0;
+    }
+
+    p {
+        padding: .8rem 0;
+    }
+
+    .smile_sun {
+        display: flex;
+        justify-self: center;
+        width: 100px;
+    }
+}
+
+
+/* --------------- End Credits --------------- */
+.end_credit {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgb(43, 43, 43);
+    padding-top: 60px;
+}
+
+.credit_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.credit_wrapper {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    animation: scroll-up 25s linear infinite;
+    color: white;
+
+    h1 {
+        text-transform: capitalize;
+    }
+
+    h3 {
+        padding: .5rem 0 .5rem 0;
+        font-weight: 500;
+    }
+
+    p {
+        padding-top: 1.5rem;
+        text-transform: capitalize;
+    }
+
+    h2 {
+        padding-top: 3rem;
+    }
+
+    img {
+        padding-top: 1.5rem;
+        width: 300px;
+    }
+
+    i:nth-child(1) {
+        color: rgb(0, 243, 0);
+    }
+
+    i:nth-child(2) {
+        color: rgb(255, 166, 0);
+    }
+}
+
+@keyframes scroll-up {
+    0% {
+        bottom: -350%;
+    }
+
+    100% {
+        bottom: 100%;
+    }
+}
