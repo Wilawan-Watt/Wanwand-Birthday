@@ -1,14 +1,3 @@
-// window.onscroll = function () { scrollFunction() };
-
-// function scrollFunction() {
-//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//         document.getElementById("nav").style.top = "0";
-//     } else {
-//         document.getElementById("nav").style.top = "-60px";
-//     }
-// }
-
-
 const retroCd = document.querySelector('.retro_cd');
 const retroPin = document.querySelector('.retro_pin');
 const audio = document.getElementById('audio');
@@ -22,7 +11,7 @@ retroCd.addEventListener('click', () => {
 
         // Reset audio to start and play at 50% volume
         audio.currentTime = 0; // Start from 00:00
-        audio.volume = 0.3;
+        audio.volume = 0.5;
         audio.play();
         isPlaying = true;
 
@@ -35,6 +24,8 @@ retroCd.addEventListener('click', () => {
                 retroCd.style.transform = `translateX(105px) rotate(${angle}deg)`;
             } if (window.innerWidth <= 550) {
                 retroCd.style.transform = `translateX(130px) rotate(${angle}deg)`;
+            } if (window.innerWidth <= 1024) {
+                retroCd.style.transform = `translateX(170px) rotate(${angle}deg)`;
             } else {
                 retroCd.style.transform = `translateX(210px) rotate(${angle}deg)`; // Rotate while maintaining the translation
             }
@@ -47,6 +38,8 @@ retroCd.addEventListener('click', () => {
                     retroPin.style.transform = 'translateX(-10px) rotate(12deg)'; // สำหรับหน้าจอที่กว้างไม่เกิน 375px
                 } if (window.innerWidth <= 550) {
                     retroPin.style.transform = 'translateX(-10px) rotate(12deg)'; // สำหรับหน้าจอที่กว้างไม่เกิน 550px
+                } if (window.innerWidth <= 550) {
+                    retroPin.style.transform = 'translateX(-10px) rotate(12deg)';
                 } else {
                     retroPin.style.transform = 'translateX(-20px)rotate(12deg)'; // Tilt retro_pin by 10 degrees
                 }

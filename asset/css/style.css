@@ -1,11 +1,11 @@
+/* --------------- Typography --------------- */
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Sriracha&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: content-box;
 }
-
-/* --------------- Typography --------------- */
-@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Sriracha&display=swap');
 
 body {
     font-family: "Mali", cursive;
@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: #89BFFB;
 }
 
 a {
@@ -38,7 +38,7 @@ a {
     text-decoration: none;
     font-weight: 700;
     font-size: 18px;
-    color: black;
+    color: white;
     padding: 0 2rem;
 }
 
@@ -63,14 +63,51 @@ a {
 @media (min-width: 375px) and (max-width: 550px) {
     header {
         width: 100%;
-        height: auto;
+        height: 60px;
     }
 
     .nav_link {
         min-width: 70%;
+        height: 60px;
 
         a {
-            font-size: 18px;
+            font-size: 20px;
+            padding: 0 1rem;
+        }
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 550-1024px */
+@media (min-width: 550px) and (max-width: 1024px) {
+    header {
+        width: 100%;
+        height: 70px;
+    }
+
+    .nav_link {
+        min-width: 70%;
+        height: 70px;
+
+        a {
+            font-size: 25px;
+            padding: 0 1rem;
+        }
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้างมากกว่า 1024px */
+@media (min-width: 1024px) {
+    header {
+        width: 100%;
+        height: 80px;
+    }
+
+    .nav_link {
+        min-width: 70%;
+        height: 80px;
+
+        a {
+            font-size: 30px;
             padding: 0 1rem;
         }
     }
@@ -81,7 +118,7 @@ a {
 .giftbox {
     width: 100%;
     height: 100vh;
-    background-color: rgb(203, 242, 255);
+    background-color: #bad9fc59;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,6 +183,7 @@ a {
     font-weight: 700;
     transition: .4s;
     z-index: -2;
+    filter: drop-shadow(3px 10px 6px #41414185);
 
     div {
         font-size: 50px;
@@ -159,7 +197,6 @@ a {
 .textunderbox {
     position: absolute;
     top: 530px;
-    font-family: "Sriracha", cursive;
     font-size: 25px;
 }
 
@@ -182,12 +219,13 @@ a {
         transform: translateY(-230px);
         z-index: 1;
         transition: .5s;
+        scale: 80%;
     }
 
     .wishes {
         position: relative;
         top: 290px;
-        scale: 80%;
+        scale: 70%;
 
         p {
             font-size: 30px;
@@ -197,7 +235,7 @@ a {
     .textunderbox {
         position: absolute;
         top: 360px;
-        font-family: "Sriracha", cursive;
+        /* font-family: "Sriracha", cursive; */
         font-size: 20px;
     }
 }
@@ -221,12 +259,13 @@ a {
         transform: translateY(-220px);
         z-index: 1;
         transition: .5s;
+        scale: 80%;
     }
 
     .wishes {
         position: relative;
         top: 280px;
-        scale: 80%;
+        scale: 70%;
 
         p {
             font-size: 33px;
@@ -236,8 +275,84 @@ a {
     .textunderbox {
         position: absolute;
         top: 380px;
-        font-family: "Sriracha", cursive;
         font-size: 25px;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 550-1024px */
+@media (min-width: 550px) and (max-width: 1024px) {
+    .giftbox {
+        width: 100%;
+        height: 500px;
+        padding: 50px 0;
+    }
+
+    .giftbox_wrapper {
+        scale: 80%;
+        position: absolute;
+        top: 50px;
+        z-index: 5;
+    }
+
+    .giftbox_top:hover~.wishes {
+        transform: translateY(-220px);
+        z-index: 1;
+        transition: .5s;
+        scale: 100%;
+    }
+
+    .wishes {
+        position: relative;
+        top: 280px;
+        scale: 65%;
+
+        p {
+            font-size: 35px;
+        }
+    }
+
+    .textunderbox {
+        position: absolute;
+        top: 500px;
+        font-size: 25px;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้างมากกว่า 1024px */
+@media (min-width: 1024px) {
+    .giftbox {
+        width: 100%;
+        height: 100vh;
+        padding: 50px 0;
+    }
+
+    .giftbox_wrapper {
+        position: absolute;
+        top: 120px;
+        z-index: 5;
+    }
+
+    .giftbox_top:hover~.wishes {
+        transform: translateY(-220px);
+        z-index: 1;
+        transition: .5s;
+        scale: 100%;
+    }
+
+    .wishes {
+        position: relative;
+        top: 285px;
+        scale: 65%;
+
+        p {
+            font-size: 35px;
+        }
+    }
+
+    .textunderbox {
+        position: absolute;
+        top: 650px;
+        font-size: 35px;
     }
 }
 
@@ -267,7 +382,7 @@ a {
 .sunshine_text {
     text-align: center;
     font-size: 50px;
-    font-family: "Sriracha", cursive;
+    /* font-family: "Sriracha", cursive; */
     padding-bottom: 50px;
 }
 
@@ -352,6 +467,34 @@ a {
     }
 }
 
+/* Media query สำหรับหน้าจอที่มีความกว้าง 550-1024px */
+@media (min-width: 550px) and (max-width: 1024px) {
+    .sunshine_song {
+        height: fit-content;
+        width: 100%;
+        height: 600px;
+    }
+
+    .sunshine_text {
+        font-size: 35px;
+        padding-bottom: 20px;
+    }
+
+    .retro_player {
+        width: 230px;
+    }
+
+    .retro_cd {
+        width: 150px;
+        right: -20px;
+    }
+
+    .retro_pin {
+        width: 55px;
+        right: 75px;
+    }
+}
+
 
 /* --------------- Birthday Wishes --------------- */
 .birthday_card {
@@ -360,15 +503,19 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 100px 0;
     background-image: url(../imag&sound/Wanwand\ Birthday_bg.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 180vh;
-    /* padding: 50px 0; */
+    background-size: contain;
+    background-color: #bad9fc59;
 }
 
 .card_container {
-    max-width: 700px;
+    width: 650px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+    padding: 50px;
 }
 
 .card_text {
@@ -386,6 +533,7 @@ a {
 
     p {
         padding: .8rem 0;
+        line-height: 2rem;
     }
 
     .smile_sun {
@@ -401,10 +549,11 @@ a {
         width: 100%;
         height: fit-content;
         padding: 80px 0;
+        background-image: none;
     }
 
     .card_container {
-        max-width: 75%;
+        max-width: 80%;
     }
 
     .card_text h2 {
@@ -418,10 +567,39 @@ a {
         width: 100%;
         height: fit-content;
         padding: 100px 0;
+        background-image: none;
+    }
+
+    .card_container {
+        max-width: 80%;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 550-1024px */
+@media (min-width: 550px) and (max-width: 1024px) {
+    .birthday_card {
+        width: 100%;
+        height: fit-content;
+        padding: 100px 0;
+        background-image: none;
     }
 
     .card_container {
         max-width: 70%;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 1024-1160px */
+@media (min-width: 1024px) and (max-width: 1160px) {
+    .card_container {
+        max-width: 50%;
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้างมากกว่า 1024px */
+@media (min-width: 1024px) {
+    .card_container {
+        max-width: 50%;
     }
 }
 
@@ -528,6 +706,19 @@ a {
         max-width: 80%;
     }
 
+    @keyframes scroll-up {
+        0% {
+            bottom: -250%;
+        }
+    
+        100% {
+            bottom: 100%;
+        }
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้าง 550-1024px */
+@media (min-width: 550px) and (max-width: 1024px) {
     @keyframes scroll-up {
         0% {
             bottom: -250%;
