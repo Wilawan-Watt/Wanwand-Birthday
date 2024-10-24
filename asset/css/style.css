@@ -590,18 +590,18 @@ a {
 }
 
 /* Media query สำหรับหน้าจอที่มีความกว้าง 1024-1160px */
-/* @media (min-width: 1024px) and (max-width: 1160px) {
+@media (min-width: 1024px) and (max-width: 1160px) {
     .card_container {
-        max-width: 50%;
+        max-width: 45%;
     }
-} */
+}
 
 /* Media query สำหรับหน้าจอที่มีความกว้างมากกว่า 1024px */
-/* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
     .card_container {
-        max-width: 50%;
+        max-width: 45%;
     }
-} */
+}
 
 
 /* --------------- End Credits --------------- */
