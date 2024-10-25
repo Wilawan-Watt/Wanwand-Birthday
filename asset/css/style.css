@@ -95,24 +95,6 @@ a {
     }
 }
 
-/* Media query สำหรับหน้าจอที่มีความกว้างมากกว่า 1024px */
-/* @media (min-width: 1024px) {
-    header {
-        width: 100%;
-        height: 80px;
-    }
-
-    .nav_link {
-        min-width: 70%;
-        height: 80px;
-
-        a {
-            font-size: 30px;
-            padding: 0 1rem;
-        }
-    }
-} */
-
 
 /* --------------- Gift Box --------------- */
 .giftbox {
@@ -174,6 +156,7 @@ a {
     transform: translateY(-150px);
     z-index: 1;
     transition: .5s;
+    display: block;
 }
 
 .wishes {
@@ -182,8 +165,8 @@ a {
     font-size: 25px;
     font-weight: 700;
     transition: .4s;
-    z-index: -2;
-    filter: drop-shadow(3px 10px 6px #41414185);
+    filter: drop-shadow(3px 5px 10px #ffffff);
+    display: none;
 
     div {
         font-size: 50px;
@@ -191,6 +174,10 @@ a {
 
     .cake {
         width: 80px;
+    }
+
+    .wanwand {
+        width: 150px;
     }
 }
 
@@ -235,7 +222,6 @@ a {
     .textunderbox {
         position: absolute;
         top: 360px;
-        /* font-family: "Sriracha", cursive; */
         font-size: 20px;
     }
 }
@@ -322,13 +308,13 @@ a {
 @media (min-width: 1024px) {
     .giftbox {
         width: 100%;
-        height: 100vh;
+        height: 650px;
         /* padding: 50px 0; */
     }
 
     .giftbox_wrapper {
         position: absolute;
-        top: 0;
+        top: 20px;
         z-index: 5;
     }
 
@@ -351,7 +337,7 @@ a {
 
     .textunderbox {
         position: absolute;
-        top: 520px;
+        top: 530px;
         font-size: 25px;
     }
 }
@@ -494,6 +480,7 @@ a {
         right: 75px;
     }
 }
+
 
 
 /* --------------- Birthday Wishes --------------- */
@@ -665,7 +652,7 @@ a {
 
 @keyframes scroll-up {
     0% {
-        bottom: -350%;
+        bottom: -380%;
     }
 
     100% {
@@ -685,12 +672,16 @@ a {
     }
 
     .credit_wrapper {
-        img {
-            scale: 80%;
+        scale: 70%;
+    }
+
+    @keyframes scroll-up {
+        0% {
+            bottom: -310%;
         }
 
-        h2 {
-            font-size: 20px;
+        100% {
+            bottom: 100%;
         }
     }
 }
@@ -708,9 +699,9 @@ a {
 
     @keyframes scroll-up {
         0% {
-            bottom: -250%;
+            bottom: -290%;
         }
-    
+
         100% {
             bottom: 100%;
         }
@@ -721,9 +712,9 @@ a {
 @media (min-width: 550px) and (max-width: 1024px) {
     @keyframes scroll-up {
         0% {
-            bottom: -250%;
+            bottom: -230%;
         }
-    
+
         100% {
             bottom: 100%;
         }
