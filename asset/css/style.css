@@ -42,6 +42,10 @@ a {
     padding: 0 2rem;
 }
 
+a:hover {
+    color: black;
+}
+
 /* Media query สำหรับหน้าจอที่มีความกว้างไม่เกิน 375px */
 @media (max-width: 375px) {
     header {
