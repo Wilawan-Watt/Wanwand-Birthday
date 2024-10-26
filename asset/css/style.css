@@ -155,7 +155,7 @@ a {
 .giftbox_top:hover~.wishes {
     transform: translateY(-150px);
     z-index: 1;
-    transition: .5s;
+    transition: .6s;
     display: block;
 }
 
@@ -201,7 +201,7 @@ a {
     .giftbox_top:hover~.wishes {
         transform: translateY(-230px);
         z-index: 1;
-        transition: .5s;
+        transition: .6s;
         scale: 80%;
     }
 
@@ -240,7 +240,7 @@ a {
     .giftbox_top:hover~.wishes {
         transform: translateY(-220px);
         z-index: 1;
-        transition: .5s;
+        transition: .6s;
         scale: 80%;
     }
 
@@ -279,7 +279,7 @@ a {
     .giftbox_top:hover~.wishes {
         transform: translateY(-220px);
         z-index: 1;
-        transition: .5s;
+        transition: .6s;
         scale: 100%;
     }
 
@@ -317,7 +317,7 @@ a {
     .giftbox_top:hover~.wishes {
         transform: translateY(-220px);
         z-index: 1;
-        transition: .5s;
+        transition: .6s;
         scale: 90%;
     }
 
@@ -590,7 +590,7 @@ a {
 /* --------------- End Credits --------------- */
 .end_credit {
     width: 100%;
-    height: 30vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -646,15 +646,15 @@ a {
     }
 }
 
-@keyframes scroll-up {
+/* @keyframes scroll-up {
     0% {
-        bottom: -380%;
+        bottom: -100vh;
     }
 
     100% {
         bottom: 100%;
     }
-}
+} */
 
 /* Media query สำหรับหน้าจอที่มีความกว้างไม่เกิน 375px */
 @media (max-width: 375px) {
@@ -673,7 +673,7 @@ a {
 
     @keyframes scroll-up {
         0% {
-            bottom: -310%;
+            bottom: -100vh;
         }
 
         100% {
@@ -695,7 +695,7 @@ a {
 
     @keyframes scroll-up {
         0% {
-            bottom: -290%;
+            bottom: -100vh;
         }
 
         100% {
@@ -706,11 +706,33 @@ a {
 
 /* Media query สำหรับหน้าจอที่มีความกว้าง 550-1024px */
 @media (min-width: 550px) and (max-width: 1024px) {
+    .end_credit {
+        width: 100%;
+        height: 300px;
+    }
+
+    .credit_container {
+        max-width: 80%;
+    }
+
     @keyframes scroll-up {
         0% {
-            bottom: -230%;
+            bottom: -100vh;
         }
 
+        100% {
+            bottom: 100%;
+        }
+    }
+}
+
+/* Media query สำหรับหน้าจอที่มีความกว้างมากกว่า 1024px */
+@media (min-width: 1024px) {
+    @keyframes scroll-up {
+        0% {
+            bottom: -120vh;
+        }
+    
         100% {
             bottom: 100%;
         }
