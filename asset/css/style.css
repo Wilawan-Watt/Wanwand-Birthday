@@ -717,7 +717,7 @@ a {
 
     @keyframes scroll-up {
         0% {
-            bottom: -100vh;
+            bottom: -120vh;
         }
 
         100% {
