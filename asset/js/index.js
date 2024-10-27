@@ -62,18 +62,20 @@ retroCd.addEventListener('click', () => {
 });
 
 // Event listener for when the audio ends
-audio.addEventListener('ended', () => {
-    // Move CD back to original position
-    retroCd.style.transform = 'translateX(0) rotate(0deg)';
+audio.addEventListener('timeupdate', () => {
+    if (audio.currentTime >= 205) {
+        // Move CD back to original position
+        retroCd.style.transform = 'translateX(0) rotate(0deg)';
 
-    // Reset the audio state
-    audio.pause();
-    audio.currentTime = 0; // Reset audio to the beginning
-    isPlaying = false;
+        // Reset the audio state
+        audio.pause();
+        audio.currentTime = 0; // Reset audio to the beginning
+        isPlaying = false;
 
-    // Stop the rotation
-    clearInterval(rotationInterval);
+        // Stop the rotation
+        clearInterval(rotationInterval);
 
-    // Reset retro pin to its original position
-    retroPin.style.transform = 'rotate(0deg)';
+        // Reset retro pin to its original position
+        retroPin.style.transform = 'rotate(0deg)';
+    }
 });
